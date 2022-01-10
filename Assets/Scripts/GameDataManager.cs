@@ -27,7 +27,7 @@ public class GameDataManager : MonoBehaviour
         {
             _path = Application.persistentDataPath + "/safefile.json";
             LoadFromFile(_path);
-            _instance = new GameDataManager();
+            _instance = this;
             DontDestroyOnLoad(gameObject);
         }
     }
