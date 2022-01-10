@@ -64,6 +64,20 @@ public class GameDataManager : MonoBehaviour
         return _saveDataSet.spawnRate;
     }
 
+
+    public void SetSpawnRate(int i)
+    {
+        if (i < 1 || i > 300)
+        {
+            return;
+        }
+        
+        _saveDataSet.spawnRate = i;
+        WriteToFile(_saveDataSet);
+    }
+
+
+
     public bool SaveScore(string name, int score)
     {
 
@@ -111,6 +125,11 @@ public class GameDataManager : MonoBehaviour
         {
             string json = File.ReadAllText(path);
             _saveDataSet = JsonUtility.FromJson<SaveDataSet>(json);
+        } else
+        {
+            _saveDataSet = new SaveDataSet();
+            _saveDataSet.spawnRate = 60;
+            WriteToFile(_saveDataSet);
         }
     }
 }
