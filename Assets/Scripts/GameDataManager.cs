@@ -8,6 +8,7 @@ public class GameDataManager : MonoBehaviour
 {
     //Singleton purpose
     private static GameDataManager _instance;
+    // ENCAPSULATION
     public static GameDataManager Instance { get { return _instance; } }
 
     private SaveDataSet _saveDataSet;
@@ -26,6 +27,7 @@ public class GameDataManager : MonoBehaviour
         } else
         {
             _path = Application.persistentDataPath + "/safefile.json";
+            // ABSTRACTION
             LoadFromFile(_path);
             _instance = this;
             DontDestroyOnLoad(gameObject);
@@ -85,7 +87,8 @@ public class GameDataManager : MonoBehaviour
         {
             if (score >= _saveDataSet.savedHighScores[i].Highscore)
             {
-               _saveDataSet.savedHighScores = ReplaceHighScore(i, name, score, _saveDataSet.savedHighScores);
+                // ABSTRACTION
+                _saveDataSet.savedHighScores = ReplaceHighScore(i, name, score, _saveDataSet.savedHighScores);
                 WriteToFile(_saveDataSet);
             }
         }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// INHERITANCE
 public abstract class Target : MonoBehaviour
 {
     // Start is called before the first frame update
