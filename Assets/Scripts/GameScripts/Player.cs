@@ -12,16 +12,20 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float m_RotX = Input.GetAxis("Mouse X") * _SensitivityX;
-        float m_RotY= -Input.GetAxis("Mouse Y") * _SensitivityY;
+        if(GameManager.IsGameActive)
+        {
+            float m_RotX = Input.GetAxis("Mouse X") * _SensitivityX;
+            float m_RotY = -Input.GetAxis("Mouse Y") * _SensitivityY;
 
 
-        _RotationX += m_RotX *Time.deltaTime;
-        _RotationY += m_RotY *Time.deltaTime;
+            _RotationX += m_RotX * Time.deltaTime;
+            _RotationY += m_RotY * Time.deltaTime;
 
-        Quaternion localRotation = Quaternion.Euler(_RotationY, _RotationX, 0.0f);
+            Quaternion localRotation = Quaternion.Euler(_RotationY, _RotationX, 0.0f);
 
-        transform.localRotation = localRotation;
+            transform.localRotation = localRotation;
+        }
+
     }
 
 
