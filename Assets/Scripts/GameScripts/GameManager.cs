@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     void ChangeToPlayMode()
     {
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         _HUDContainer.SetActive(true);
         _MenuContainer.SetActive(false);
         _IsGameActive = true;
@@ -41,10 +41,10 @@ public class GameManager : MonoBehaviour
 
     void ChangeToMenuMode()
     {
-        Cursor.visible = true;
         _HUDContainer.SetActive(false);
         _MenuContainer.SetActive(true);
         _IsGameActive = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
 }

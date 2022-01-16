@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
     {
         _MainMenuRootObject.SetActive(true);
         _OptionsMenuRootObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void SwitchToOptionsMenu()
