@@ -2164,6 +2164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd89da286dd5ac40b0fd23a35c50313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spawnRateInput: {fileID: 797142364}
+  _saveButton: {fileID: 1274450029}
 --- !u!1 &2139570561
 GameObject:
   m_ObjectHideFlags: 0
