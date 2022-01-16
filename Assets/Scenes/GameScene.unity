@@ -944,13 +944,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a4859671ed03c4481dfc84d93778e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _MaximumConcurrentTargetCount: 0
+  _LowerLimit: {x: -20, y: 0, z: -20}
+  _UpperLimit: {x: 20, y: 0, z: 20}
+  _MaximumConcurrentTargetCount: 5
   _HUDContainer: {fileID: 1084310717}
   _MenuContainer: {fileID: 1214059600}
   _TargetPrefabs:
-  - {fileID: 927689742199418920, guid: d4d8a7f696a82c0458662ed65ef1f997, type: 3}
   - {fileID: 5780950583887891399, guid: 81dd9a077b0ed2445a816d462bb784e4, type: 3}
   - {fileID: 2963258866486740209, guid: 81a159d9eeb47f84c92de713c7157283, type: 3}
+  - {fileID: 927689742199418920, guid: d4d8a7f696a82c0458662ed65ef1f997, type: 3}
 --- !u!1 &2089592421
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,17 +4,20 @@ using UnityEngine;
 // INHERITANCE
 public abstract class Target : MonoBehaviour
 {
-    
 
 
 
 
+    protected GameObject _GameManager;
     [SerializeField] protected Color _Color;
     [SerializeField] protected Vector3 _Size;
-    [SerializeField] protected int _value;
+    [SerializeField] protected int _Value;
+    [SerializeField] protected int _Probability;
+
+    public int Probability { get { return _Probability; } }
 
 
-    public int Value { get { return _value; } }
+    public int Value { get { return _Value; } }
 
     public abstract void ReactToPlayer();
 
@@ -22,6 +25,12 @@ public abstract class Target : MonoBehaviour
     {
         SetColor();
         SetSize();
+        SetGameManager();
+    }
+
+    private void SetGameManager()
+    {
+        _GameManager = GameObject.FindObjectOfType<GameManager>().gameObject;
     }
 
 

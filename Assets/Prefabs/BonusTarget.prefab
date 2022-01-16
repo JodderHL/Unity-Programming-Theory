@@ -108,6 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc81ed0013cba74c92e19408bc43ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _GameManager: {fileID: 0}
   _Color: {r: 1, g: 0.75323707, b: 0, a: 0}
   _Size: {x: 1, y: 1, z: 1}
-  _value: 25
+  _Value: 25
+  _Probability: 10
+  _DespawnTimer: 5

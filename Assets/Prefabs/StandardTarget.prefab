@@ -128,4 +128,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Color: {r: 0, g: 0.11251116, b: 1, a: 0}
   _Size: {x: 2, y: 2, z: 2}
-  _value: 10
+  _Value: 10
+  _Probability: 60
