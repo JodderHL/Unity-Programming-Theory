@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // INHERITANCE
-public class NewBehaviourScript : Target
+public class NegativeTarget: Target
 {
 
 
