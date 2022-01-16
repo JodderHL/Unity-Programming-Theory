@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2915558554851492612}
   - component: {fileID: 132186247551713855}
   - component: {fileID: 55180455049672491}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BonusTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc81ed0013cba74c92e19408bc43ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _GameManager: {fileID: 0}
   _Color: {r: 1, g: 0.75323707, b: 0, a: 0}
   _Size: {x: 1, y: 1, z: 1}
   _Value: 25
