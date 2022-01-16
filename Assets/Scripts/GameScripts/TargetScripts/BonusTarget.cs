@@ -5,6 +5,14 @@ using UnityEngine;
 public class BonusTarget : Target
 {
     // POLYMORPHISM
+    protected override void Start()
+    {
+        base.Start();
+    }
+
+
+
+    // POLYMORPHISM
     public override void ReactToPlayer()
     {
         throw new System.NotImplementedException();

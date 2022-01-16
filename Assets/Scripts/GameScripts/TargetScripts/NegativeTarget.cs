@@ -4,6 +4,13 @@ using UnityEngine;
 // INHERITANCE
 public class NewBehaviourScript : Target
 {
+
+
+    protected override void Start()
+    {
+        base.Start();
+    }
+
     // POLYMORPHISM
     public override void ReactToPlayer()
     {
