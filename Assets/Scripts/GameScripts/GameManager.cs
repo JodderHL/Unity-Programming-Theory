@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         _spawnTimer += Time.deltaTime;
         if (_spawnTimer >= 60f/GameDataManager.Instance.GetSpawnRate())
         {
-            print("Spawntimer value: " + _spawnTimer + "SpawnRate: " + 60/GameDataManager.Instance.GetSpawnRate());
+            //print("Spawntimer value: " + _spawnTimer + "SpawnRate: " + 60/GameDataManager.Instance.GetSpawnRate());
             _spawnTimer = 0;
             return true;
         }
