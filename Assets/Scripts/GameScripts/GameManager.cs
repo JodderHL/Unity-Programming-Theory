@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject _HUDContainer;
     [SerializeField] private GameObject _MenuContainer;
+    // ENCAPSULATION
     private static bool _IsGameActive;
     public static bool IsGameActive { get { return _IsGameActive; } }
     // Start is called before the first frame update
