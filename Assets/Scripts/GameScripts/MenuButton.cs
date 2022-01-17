@@ -11,4 +11,9 @@ public class MenuButton : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }

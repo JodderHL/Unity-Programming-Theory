@@ -1,28 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
 
     private double _spawnTimer;
     private int _CurrentTargetCount;
+    
+    private int _Points;
 
+    public int Points { get { return _Points; } }
 
+    [SerializeField] private Text _ScoreText;
     [SerializeField] private Vector3 _LowerLimit;
     [SerializeField] private Vector3 _UpperLimit;   
     [SerializeField] int _MaximumConcurrentTargetCount;
     [SerializeField] private GameObject _HUDContainer;
     [SerializeField] private GameObject _MenuContainer;
+    [SerializeField] private GameObject _GameOverContainer;
     [SerializeField] private GameObject[] _TargetPrefabs;
     // ENCAPSULATION
     private static bool _IsGameActive;
+    private static bool _IsGameOver;
     public static bool IsGameActive { get { return _IsGameActive; } }
     // Start is called before the first frame update
     void Start()
     {
         ChangeToPlayMode();
         _CurrentTargetCount = 0;
+        _Points = 0;
+        _IsGameOver = false;
+        _GameOverContainer.SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,14 +40,18 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (_IsGameActive)
+            if(!_IsGameOver)
             {
-                ChangeToMenuMode();
+                if (_IsGameActive)
+                {
+                    ChangeToMenuMode();
+                }
+                else
+                {
+                    ChangeToPlayMode();
+                }
             }
-            else
-            {
-                ChangeToPlayMode();
-            }
+
         }
 
         if (_IsGameActive)
@@ -73,6 +87,15 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
     }
 
+    void ChangeToGameOverMode()
+    {
+        _HUDContainer.SetActive(false);
+        _MenuContainer.SetActive(false);
+        _GameOverContainer.SetActive(true);
+        _IsGameActive = false;
+        _IsGameOver = true;
+        Cursor.lockState = CursorLockMode.Confined;
+    }
 
     private bool CheckSpawnTimer()
     {
@@ -113,9 +136,16 @@ public class GameManager : MonoBehaviour
         _CurrentTargetCount--;
     }
 
+    public void TargetHit(Target t)
+    {
+        _CurrentTargetCount--;
+        _Points += t.Value;
+        _ScoreText.text = "Points: " + _Points;
+    }
+
     private void GameOver()
     {
-
+        ChangeToGameOverMode();
     }
 
 }

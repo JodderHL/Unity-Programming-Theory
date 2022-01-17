@@ -45,4 +45,10 @@ public abstract class Target : MonoBehaviour
         transform.localScale = _Size;
         transform.position = new Vector3(transform.position.x,_Size.y,transform.position.z);
     }
+
+    public void Hit()
+    {
+        _GameManager.GetComponent<GameManager>().TargetHit(this);
+        Destroy(gameObject);
+    }
 }
