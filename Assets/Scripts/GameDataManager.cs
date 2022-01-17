@@ -12,6 +12,7 @@ public class GameDataManager : MonoBehaviour
     public static GameDataManager Instance { get { return _instance; } }
 
     private SaveDataSet _saveDataSet;
+    public SaveDataSet GetSaveDataSet { get { return _saveDataSet; } }
     private string _path;
 
 
@@ -95,6 +96,9 @@ public class GameDataManager : MonoBehaviour
 
         return false;
     }
+
+
+    
 
     private SaveData[] ReplaceHighScore(int index, string name, int score, SaveData[] savedHighScores)
     {

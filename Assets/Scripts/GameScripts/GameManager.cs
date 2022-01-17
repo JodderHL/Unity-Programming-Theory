@@ -95,6 +95,7 @@ public class GameManager : MonoBehaviour
         _IsGameActive = false;
         _IsGameOver = true;
         Cursor.lockState = CursorLockMode.Confined;
+        _GameOverContainer.GetComponent<GameOver>().Score = _Points;
     }
 
     private bool CheckSpawnTimer()
