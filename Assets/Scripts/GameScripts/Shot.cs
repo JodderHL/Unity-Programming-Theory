@@ -24,11 +24,12 @@ public class Shot : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
+        if (other.gameObject.layer == 9) return;
         if(other.gameObject.GetComponent<Target>() != null )
         {
-            print("Hit!");
+            //print("Hit!");
             other.gameObject.GetComponent<Target>().Hit();
         }
     }

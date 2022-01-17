@@ -26,9 +26,12 @@ public class GameOver : MonoBehaviour
 
     private void Update()
     {
-        if (_NameInputField.text != "")
+        if (_NameInputField.text != "" && _NewHighscore)
         {
             _RegisterScoreButton.interactable = true;
+        } else
+        {
+            _RegisterScoreButton.interactable= false;
         }
     }
 
@@ -48,6 +51,14 @@ public class GameOver : MonoBehaviour
         _NameInputField.interactable = false;
         _NameInputField.placeholder.GetComponent<Text>().text = "Lol you suck";
         return false;
+    }
+
+    public void SaveHighScore()
+    {
+        GameDataManager.Instance.SaveScore(_NameInputField.text, _Score);
+        _NewHighscore = false;
+        _NameInputField.interactable = false;
+
     }
 
 

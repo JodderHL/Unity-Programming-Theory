@@ -22,6 +22,9 @@ public class OptionsMenuManager : MonoBehaviour
         if (_spawnRateInput.text != "")
         {
             _saveButton.interactable = true;
+        } else
+        {
+            _saveButton.interactable= false;
         }
     }
 
