@@ -91,6 +91,7 @@ public class GameDataManager : MonoBehaviour
                 // ABSTRACTION
                 _saveDataSet.savedHighScores = ReplaceHighScore(i, name, score, _saveDataSet.savedHighScores);
                 WriteToFile(_saveDataSet);
+                return true;
             }
         }
 
