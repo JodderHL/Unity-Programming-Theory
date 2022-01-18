@@ -2032,8 +2032,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ScoreText: {fileID: 1341472207}
-  _LowerLimit: {x: -20, y: 0, z: -20}
-  _UpperLimit: {x: 20, y: 0, z: 20}
+  _LowerLimit: {x: -20, y: 0, z: 0}
+  _UpperLimit: {x: 20, y: 0, z: 40}
   _MaximumConcurrentTargetCount: 5
   _HUDContainer: {fileID: 1084310717}
   _MenuContainer: {fileID: 1214059600}
