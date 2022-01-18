@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class OptionsMenuManager : MonoBehaviour
 {
 
-
+    // ENCAPSULATION
     [SerializeField] private InputField _spawnRateInput;
     [SerializeField] private Button _saveButton;
 

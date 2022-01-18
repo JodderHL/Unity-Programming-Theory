@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class GameOver : MonoBehaviour
 {
-
+    // ENCAPSULATION
     [SerializeField] private Text _CurrentScore;
     [SerializeField] private InputField _NameInputField;
     [SerializeField] private Button _RegisterScoreButton;

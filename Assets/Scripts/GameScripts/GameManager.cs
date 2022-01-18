@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
+    // ENCAPSULATION
     private double _spawnTimer;
     private int _CurrentTargetCount;
-    
+    // ENCAPSULATION
     private int _Points;
 
     public int Points { get { return _Points; } }
-
+    // ENCAPSULATION
     [SerializeField] private Text _ScoreText;
     [SerializeField] private Vector3 _LowerLimit;
     [SerializeField] private Vector3 _UpperLimit;   
